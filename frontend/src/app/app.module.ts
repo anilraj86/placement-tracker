@@ -15,6 +15,12 @@ import { StudentsListComponent } from './pages/admin/students-list/students-list
 import { VacanciesComponent } from './pages/admin/vacancies/vacancies.component';
 import { VacancyMatchingComponent } from './pages/admin/vacancy-matching/vacancy-matching.component';
 import { AdminheaderComponent } from './pages/admin/adminheader/adminheader.component';
+import { StudentdashboardComponent } from './pages/student/studentdashboard/studentdashboard.component';
+import { StudentjobappliedComponent } from './pages/student/studentjobapplied/studentjobapplied.component';
+import { StudentjobstatusComponent } from './pages/student/studentjobstatus/studentjobstatus.component';
+import { StudentjobvacancyComponent } from './pages/student/studentjobvacancy/studentjobvacancy.component';
+import { StudentprofileComponent } from './pages/student/studentprofile/studentprofile.component';
+import { StudentnavComponent } from './pages/student/studentnav/studentnav.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { AdminheaderComponent } from './pages/admin/adminheader/adminheader.comp
     StudentsListComponent,
     VacanciesComponent,
     VacancyMatchingComponent,
-    AdminheaderComponent
+    AdminheaderComponent,
+    StudentdashboardComponent,
+    StudentjobappliedComponent,
+    StudentjobstatusComponent,
+    StudentjobvacancyComponent,
+    StudentprofileComponent,
+    StudentnavComponent
   ],
   imports: [
     BrowserModule,
