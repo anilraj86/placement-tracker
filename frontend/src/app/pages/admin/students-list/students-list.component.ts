@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentsListComponent implements OnInit {
 
+  students:any=[];
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  editStudents(stdents:any){}
+  disableStudents(id:any){}
 }

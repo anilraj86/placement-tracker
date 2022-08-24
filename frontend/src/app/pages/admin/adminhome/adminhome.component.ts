@@ -1,5 +1,6 @@
-import { AfterViewInit, ChangeDetectorRef, Component, OnInit,ViewChild } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { MatSidenavContent } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-adminhome',
@@ -8,8 +9,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class AdminhomeComponent implements OnInit {
 
-  @ViewChild(MatSidenav)
-  sidenav!:MatSidenav;
+  @ViewChild(MatSidenavContent)
+  sidenav!:MatSidenavContent;
   
   constructor() { }
 

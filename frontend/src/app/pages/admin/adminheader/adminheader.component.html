@@ -1,3 +1,4 @@
+<div>
 <mat-toolbar>
     <button mat-icon-button *ngIf="sidenav.mode==='over'" (click)="sidenav.toggle()">
     <mat-icon *ngIf="!sidenav.opened">
@@ -8,8 +9,7 @@
     </mat-icon>
     </button>
     Welcome Admin Name
-    
- </mat-toolbar>
+</mat-toolbar>
 
  <mat-sidenav-container>
     
@@ -40,10 +40,9 @@
             <span>Logout</span>
         </button>
     </mat-sidenav>
-
     <mat-sidenav-content>
-        <div class="content mat-elevation-z8">
-            Main content here!
+        <div class="content mat-elevation-z8" id="mat-main-content">
+            <router-outlet></router-outlet>
         </div>
     </mat-sidenav-content>
- </mat-sidenav-container>
+</mat-sidenav-container>

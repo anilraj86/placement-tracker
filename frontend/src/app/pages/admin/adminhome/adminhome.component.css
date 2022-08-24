@@ -1,0 +1,19 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.status-container{
+   
+    margin-top: 40px;
+    margin-left: 28px;
+    border:1px solid red;
+    
+   }
+
+.status-display{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 18rem;
+    height: 20rem;
+}

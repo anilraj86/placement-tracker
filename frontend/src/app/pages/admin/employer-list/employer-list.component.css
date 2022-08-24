@@ -1,0 +1,10 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.emp-list{
+    margin-top: 10px;
+    margin-left: 20px;
+}

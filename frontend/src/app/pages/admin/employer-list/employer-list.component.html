@@ -1,1 +1,49 @@
-<app-adminheader></app-adminheader>
+<div calss="container emp-list" style="padding-left: 2px; width: 70rem;">
+    <div class="card" style="width:66.5rem;">
+        <div>
+            <table class="table">
+                <thead style="width:68.5rem;" class="thead bg-success text-light">
+                    <tr>
+                        <!-- <th scope="col">Image</th> -->
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Job Description</th>
+                        <th scope="col">Experience</th>
+                        <th scope="col">Last Date</th>
+                        <th scope="col">ACTION </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employers">
+                        <td>{{employee.employersId}}</td>
+                        <td>{{employee.employersName}}</td>
+                        <td>{{employee.jobdescriptions}}</td>
+                        <td>{{employee.experience}}</td>
+                        <td>{{employee.enddate}} ddd</td>
+                        <td>
+
+                                    <div>
+                                    <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                        data-placement="top" title="Edit book" (click)="editEmployers(employers)">
+                                        <img style="width: 20px;padding-bottom: 2px;"
+                                            src=".\assets\icons\icons8-edit-50.png" alt="">
+                                    </button>
+                                  </div>
+                        </td>
+
+                        <td>
+                                  <div>
+                                  <button type="button" class="btn btn-outline-danger" data-toggle="tooltip"
+                                  data-placement="top" title="Delete book" (click)="disableEmployee(employers._id)">
+                                  <img style="width: 20px;padding-bottom: 2px;"
+                                  src=".\assets\icons\icons8-delete-50.png" alt="">
+                                </button>
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>

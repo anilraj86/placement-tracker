@@ -1,7 +1,7 @@
 import { AfterViewInit,ChangeDetectorRef, Component, OnInit,ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import{ BreakpointObserver } from '@angular/cdk/layout';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -14,26 +14,27 @@ export class AdminheaderComponent implements AfterViewInit,OnInit {
   @ViewChild(MatSidenav)
   sidenav!:MatSidenav;
 
-  constructor(private observer:BreakpointObserver, private changed:ChangeDetectorRef,private rout:Router) { }
+  constructor(private observer:BreakpointObserver, private changed:ChangeDetectorRef,
+    private rout:Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
   homeClick()
   {
-    this.rout.navigateByUrl('/adminhome')
+    this.rout.navigate(['adminhome'],{relativeTo:this.route});
   }
   studntClick(){
-    this.rout.navigateByUrl('/students');
+    this.rout.navigate(['students'],{relativeTo:this.route});
   }
   employerClick(){
-    this.rout.navigateByUrl('/employers');
+    this.rout.navigate(['employers'],{relativeTo:this.route});
   }
   vacancyClick(){
-    this.rout.navigateByUrl('/vacancies');
+    this.rout.navigate(['vacancies'],{relativeTo:this.route});
   }
   matchClick(){
-    this.rout.navigateByUrl('/vacancymatch');
+    this.rout.navigate(['vacancymatch'],{relativeTo:this.route});
   }
   ngAfterViewInit(){
     this.observer.observe(['(max-width:800px)']).subscribe((res)=>{

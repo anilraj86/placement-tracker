@@ -1,1 +1,48 @@
-<app-adminheader></app-adminheader>
+<div style="padding-left: 2px; width: 70%;">
+    <div class="card" style="width:66.5rem;">
+        <div>
+            <table class="table">
+                <thead style="width:68.5rem;" class="thead bg-success text-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Company Name</th>
+                        <th scope="col">Qualifications</th>
+                        <th scope="col">Experience</th>
+                        <th scope="col">Last Date</th>
+                        <th scope="col">ACTION </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let vacancy of vacancies">
+                        <td>{{vacancy.vacanciesId}}</td>
+                        <td>{{vacancy.companyName}}</td>
+                        <td>{{vacancy.qualifications}}</td>
+                        <td>{{vacancy.experience}}</td>
+                        <td>{{vacancy.lastdate}}</td>
+                        <td>
+
+                                    <div>
+                                    <button type="button" class="btn btn-outline-primary" data-toggle="tooltip"
+                                        data-placement="top" title="Edit book" (click)="editVacancy(vacancies)">
+                                        <img style="width: 20px;padding-bottom: 2px;"
+                                            src=".\assets\icons\icons8-edit-50.png" alt="">
+                                    </button>
+                                  </div>
+                        </td>
+
+                        <td>
+                                  <div>
+                                  <button type="button" class="btn btn-outline-danger" data-toggle="tooltip"
+                                  data-placement="top" title="Delete book" (click)="deleteVacancy(vacancies._id)">
+                                  <img style="width: 20px;padding-bottom: 2px;"
+                                  src=".\assets\icons\icons8-delete-50.png" alt="">
+                                </button>
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>
